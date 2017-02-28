@@ -1,0 +1,12 @@
+{
+  "id": "mapsplice_map_linfang_0002",
+  "type": "tool",
+  "name": "ref_rna.gene_structure.mapsplice_map",
+  "options": {
+    "ref_dir": "/mnt/ilustre/users/sanger-dev/sg-users/jinlinfang/tooltest/ref_dir/ref_bowtie_index",
+    "_1_fq_list": "/mnt/ilustre/users/sanger-dev/sg-users/jinlinfang/fastqdata/human_lipei/DeS1_R1_.fastq",
+    "_2_fq_list": "/mnt/ilustre/users/sanger-dev/sg-users/jinlinfang/fastqdata/human_lipei/DeS1_R2_.fastq",
+    "bowtie_index_dir": "/mnt/ilustre/users/sanger-dev/sg-users/jinlinfang/tooltest/ref_dir/ref_bowtie_index",
+    "seq_type": "paired"
+  }
+}

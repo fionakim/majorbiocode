@@ -1,0 +1,90 @@
+Usage: spladder.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+
+  MANDATORY:
+    -b FILE1,FILE2,..., --bams=FILE1,FILE2,...
+                        alignment files in BAM format (comma separated list)
+    -o DIR, --outdir=DIR
+                        output directory
+    -a FILE, --annotation=FILE
+                        file name for annotation in GTF/GFF3 or format
+
+  INPUT OPTIONS:
+    -P y|n, --primary_only=y|n
+                        only use primary alignments [n]
+    -X y|n, --var_aware=y|n
+                        alignment files are variation aware (presence of XM
+                        and XG tags) [n]
+    -L STRING, --label=STRING
+                        label for current experiment [-]
+    -S STRING, --ref_strain=STRING
+                        reference strain [-]
+    -n INT, --readlen=INT
+                        read length (used for automatic confidence levele
+                        settings) [36]
+    -x y|n, --same_genome=y|n
+                        input alignments share the same genome [y]
+    -F FILE, --spladderfile=FILE
+                        use existing SplAdder output file as input (advanced)
+                        [-]
+
+  OUTPUT OPTIONS:
+    -l FILE, --logfile=FILE
+                        log file name [stdout]
+    -v y|n, --verbose=y|n
+                        verbosity
+    -d y|n, --debug=y|n
+                        use debug mode [n]
+
+  GRAPH OPTIONS:
+    -c INT, --confidence=INT
+                        confidence level (0 lowest to 3 highest) [3]
+    -I INT, --iterations=INT
+                        number of iterations to insert new introns into the
+                        graph [5]
+    -M <STRAT>, --merge_strat=<STRAT>
+                        merge strategy, where <STRAT> is one of: merge_bams,
+                        merge_graphs, merge_all [merge_graphs]
+    -i y|n, --insert_ir=y|n
+                        insert intron retentions [y]
+    -e y|n, --insert_es=y|n
+                        insert cassette exons [y]
+    -E y|n, --insert_ni=y|n
+                        insert new intron edges [y]
+    -r y|n, --remove_se=y|n
+                        remove short exons [n]
+    -V y|n, --validate_sg=y|n
+                        validate splice graph [n]
+    -s y|n, --re-infer_sg=y|n
+                        re-infer splice graph [n] (advanced)
+
+  SPLICE OPTIONS:
+    -T y|n, --extract_as=y|n
+                        extract alternative splicing events [y]
+    -A y|n, --curate_alt_prime=y|n
+                        curate alt prime events [y]
+    -t STRING, --event_types=STRING
+                        list of alternative splicing events to extract [exon_s
+                        kip,intron_retention,alt_3prime,alt_5prime,mult_exon_s
+                        kip]
+
+  EXPERIMENTAL - BETA STATE:
+    -p y|n, --pyproc=y|n
+                        use parallel implementation [n]
+    -R 1,1,2,2,..., --replicates=1,1,2,2,...
+                        replicate structure of files (same number as alignment
+                        files) [all 1 - no replicated]
+    -U y|n, --intron_cov=y|n
+                        count intron coverage [n]
+    --sparse_bam=y|n    store BAM content as sparse representation for later
+                        use [n]
+    --ignore_mismatches=y|n
+                        ignore mismatches - does not filter by edit operations
+                        - does not require NM in BAM [n]
+    --output_struc=y|n  outputs events in structured splicing syntax similar
+                        to astalavista [n]
+    --parallel=<INT>    use multiple processors [1]
+    -q y|n, --quantify_graph=y|n
+                        quantify graph - implicilty set then -T is set [n]

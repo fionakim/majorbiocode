@@ -1,0 +1,9 @@
+{
+  "id": "bowtie_index_linfang_0002",
+  "type": "tool",
+  "name": "ref_rna.gene_structure.bowtie_index",
+  "options": {
+    "ref_fa" : "/mnt/ilustre/users/sanger-dev/sg-users/jinlinfang/tooltest/ref_dir/ref_bowtie_index/1.fa",
+    "bowtie_version" : "bowtie"
+  }
+}

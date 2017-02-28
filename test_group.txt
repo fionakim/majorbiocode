@@ -1,0 +1,7 @@
+#compare	control
+1_1	A1,A2,A3
+1_2	A1,A2
+1_3	A2
+2_1	B1
+2_2	B1,B3
+2_3	B1,B2,B3

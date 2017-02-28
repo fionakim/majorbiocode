@@ -1,0 +1,3 @@
+#STAR（Spliced Transcripts Alignment to a Reference）是Alexander Dobin等人于2013年发表在bioinformatics上的一个快速普适的转录组测序比对算法。STAR可以准确比对由三代测序技术产生的长序列。
+#与大部分比对软件不同，STAR不是单纯的由DNA短序列比对软件扩展而来的（比如TopHat就是由Bowtie扩展而来），它直接用非连续序列进行比对，在速度方面也有所提升。
+#算法由两部分组成：种子搜索（seed search）和聚类、拼接、打分（clustering/stitching/scoring）。STAR进行种子搜索的核心是MMP（Maximal Mappable Prefix）,与大型基因数据比对工具Mummer和MAUVE的Maximal Exact Match概念相似，通过运行非压缩的后缀数组（suffix array, SAs）实现。MMP可以发现不同的不匹配序列，但是与Mummer和MAUVE不同，在MMP中，只有不匹配的序列进入第二轮搜索。MMP的这一特性使得STAR的运行速度有了非常显著的提高。根据用户对匹配、不匹配、插入缺失、间隔定义的分值评估比对结果并打分，选择分值最高的结果输出。

@@ -1,0 +1,12 @@
+{
+  "id": "mapsplice_module_linfang_0002",
+  "type": "module",
+  "name": "ref_rna.gene_structure.mapsplice",
+  "options": {
+   "have_single_seq": 1,
+    "have_index" : 0,
+    "fastq_dir": "/mnt/ilustre/users/sanger-dev/sg-users/jinlinfang/tooltest/test_fq",
+    "seq_type": "paired",
+    "single_fa_dir" : "/mnt/ilustre/users/sanger-dev/workspace/20170206/Single_mapsplice_module_linfang_0002/Mapsplice/MapspliceSplitFa/output"
+  }
+}
