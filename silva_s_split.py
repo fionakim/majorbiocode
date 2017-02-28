@@ -5,13 +5,16 @@ import re
 import subprocess
 import argparse
 
-parser = argparse.ArgumentParser(description="s级重复字符")
-parser.add_argument("-i", "--tax_file", help="分类库文件", required=True)
-parser.add_argument("-o", "--new_tax", help="去掉单引号后的分类库文件", required=True)
-args = vars(parser.parse_args())
+# parser = argparse.ArgumentParser(description="s级重复字符")
+# parser.add_argument("-i", "--tax_file", help="分类库文件", required=True)
+# parser.add_argument("-o", "--new_tax", help="去掉单引号后的分类库文件", required=True)
+# args = vars(parser.parse_args())
+#
+# old_tax = args["tax_file"]
+# new_tax1 = args["new_tax"]
 
-old_tax = args["tax_file"]
-new_tax1 = args["new_tax"]
+old_tax = 'Z:\\tmp_data\\test.tax'
+new_tax1 = 'Z:\\tmp_data\\silva_new.tax'
 
 fw = open(new_tax1, "w+")
 all_list = []
